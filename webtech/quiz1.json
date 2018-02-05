@@ -39,9 +39,9 @@
     "id": "5",
     "question": "question5: 10+5",
     "choice1":"5",
-    "choice2":"6",
+    "choice2":"10",
     "choice3":"15",
-    "choice4":"16",
+    "choice4":"20",
     "ans":"15"
 },
 {
