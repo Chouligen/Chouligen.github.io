@@ -8,24 +8,31 @@
 </head>
 <body>
     <div class="boxbox">
-        <div class="Timer" id="status">Time</div>
-        <div id="point">Point</div>
+        <div class="Timer" id="status">Welcome to Lab3 Game Show!</div>
+        <div id="point">------------------------</div>
         <div class="Pic-cquestion">
             <img src="pic1.jpg">
         </div>
-        <div class="question"id="question"> question1 :  1+1 = ? </div>
-        <div class= "choice" id="choice1">1</div>
-        <div class= "choice" id="choice2">2</div>
-        <div class= "choice" id="choice3">3</div>
-        <div class= "choice" id="choice4">4</div>
+        <div class="question"id="question"> Plese Select numbers of question. </div>
+        <div class= "choice" id="choice1">---------</div>
+        <div class= "choice" id="choice2">---------</div>
+        <div class= "choice" id="choice3">---------</div>
+        <div class= "choice" id="choice4">---------</div>
+        <div class= "select" id="question10">10 question</div>
+        <div class= "select" id="question20">20 question</div>
     </div>
     <script src="jquery-3.3.1.min.js" charset="utf-8"></script>
 
     <script>
         var list_question = [];
         var use_question = [];
-        var count_question = 10;
+        var count_question ;
         var timer;
+        var point = 0;
+        var number ;
+        var element ;
+        var sectotal =0;
+        var first =0;
         $(document).ready(function(){
             $.ajax({
                 url: "quiz1.json",
@@ -35,28 +42,52 @@
                     for (let i = 0; i < dataquiz1.length; i++){
                         list_question[i] = dataquiz1[i];
                     }
-                    nextQuestion();
                     
                     
                 }
             });
         });
+        $('#question10').click(function(){
+            count_question = 11;
+            $('#point').html(point+" Points");
+            $('#question10').html("");
+            $('#question20').html("");
+            first =1;
+            nextQuestion();
+        })
+        $('#question20').click(function(){
+            count_question = 21;
+            $('#point').html(point+" Points");
+            $('#question20').html("");
+            $('#question10').html("");
+            first=1;
+            nextQuestion();
+        })
         $('#choice1').click(function(){
-            $('#choice1').html(list_question[0]["ans"]);
+            check(list_question[number]["choice1"],list_question[number]["ans"])
+            nextQuestion();
+            sectotal--;
         })
         $('#choice2').click(function(){
-            $('#choice2').html(list_question[0]["ans"]);
+            check(list_question[number]["choice2"],list_question[number]["ans"])
+            nextQuestion();
+            sectotal--;
         })
         $('#choice3').click(function(){
-            $('#choice3').html(list_question[0]["ans"]);
+            check(list_question[number]["choice3"],list_question[number]["ans"])
+            nextQuestion();
+            sectotal--;
         })
         $('#choice4').click(function(){
-            $('#choice4').html(list_question[0]["ans"]);
+            check(list_question[number]["choice4"],list_question[number]["ans"])
+            nextQuestion();
+            sectotal--;
         })
+        
     function nextQuestion(){
         clearTimeout(timer);
         while (use_question.length < count_question){
-            var number = Math.floor(Math.random()*list_question.length);
+            number = Math.floor(Math.random()*list_question.length);
             console.log(number);
             if (use_question.indexOf(number)==-1){
                 use_question[use_question.length] = number;
@@ -65,21 +96,22 @@
             }
         }
         if (use_question.length<count_question){
-            console.log("KO");
-            countDown(1,"status");
+            countDown(10,"status");
             $('#question').html(list_question[number]["question"]);
             $('#choice1').html(list_question[number]["choice1"]);
             $('#choice2').html(list_question[number]["choice2"]);
             $('#choice3').html(list_question[number]["choice3"]);
             $('#choice4').html(list_question[number]["choice4"]);
         }else{
-            console.log("LLL");
             clearTimeout(timer);
+            $('#point').html(point+" Points");
+            element.innerHTML = "Totals : "+sectotal+" seconds.";
+            alert("Complete");
         }
     }
 
     function countDown(secs,elem) {
-	var element = document.getElementById(elem);
+    element = document.getElementById(elem);
 	element.innerHTML = "Time: "+secs+" seconds";
 	if(secs < 1) {
 		clearTimeout(timer);
@@ -87,16 +119,21 @@
         if (use_question.length<count_question){
             nextQuestion();
         }
-        
-        
-        // secs=5;
 	}
     else{
         secs--;
+        sectotal++;
 	    timer = setTimeout('countDown('+secs+',"'+elem+'")',1000);
     }
 
 }
+function check(r,a){
+    if(r === a){
+        point = point+1;
+        $('#point').html(point+" Points");
+    }
+}
+
 
     </script>
 
@@ -115,6 +152,22 @@
     .choice:hover{
         border: solid rgb(0, 49, 95);
         background: rgb(57, 157, 196);
+    }
+    .select{
+        border: solid rgb(75, 0, 105);
+        background: rgb(209, 62, 253);
+        text-align: center;
+        width: 20%;
+        padding: 10px;
+        margin: 20px auto;
+    }
+    .select:hover{
+        border: solid rgb(75, 0, 105);
+        background: rgb(253, 192, 62);
+        text-align: center;
+        width: 20%;
+        padding: 10px;
+        margin: 20px auto;
     }
 </style>
 </html>
