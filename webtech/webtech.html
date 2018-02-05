@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Lab3-WebGame</title>
+</head>
+<body>
+    <div>
+        <div id "question"> question1 :  1+1 = ? </div>
+        <div id="choice1">1</div>
+        <div id="choice2">2</div>
+        <div id="choice3">3</div>
+        <div id="choice4">4</div>
+    </div>
+    <script src="jquery-3.3.1.min.js" charset="utf-8"></script>
+
+    <script>
+        $(document).ready(function(){
+            $.ajax({
+                url: "quiz1.json",
+                type: "GET",
+                data: "jsonObj",
+                success:function(dataquiz1){
+                    console.log(dataquiz1[0]["choice1"]);
+                    $('#question').html(dataquiz1[0]["ans"]);
+                    $('#VV').html(dataquiz1[0]["choice1"]);
+                }
+            });
+        });
+        $('#choice1').click(function(){
+            alert("hi");
+        })
+    </script>
+
+</body>
+</html>
