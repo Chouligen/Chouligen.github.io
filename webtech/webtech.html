@@ -10,8 +10,8 @@
     <div class="boxbox">
         <div class="Timer" id="status">Welcome to Lab3 Game Show!</div>
         <div id="point">------------------------</div>
-        <div class="Pic-cquestion">
-            <img src="pic1.jpg">
+        <div class="pic-question">
+            <img src="pic0.jpg">
         </div>
         <div class="question"id="question"> Plese Select numbers of question. </div>
         <div id="choice-wrapper">
@@ -114,6 +114,7 @@
             element.innerHTML = "Totals : "+sectotal+" seconds.";
             alert("Complete");
             $('#question').html("");
+            $('.pic-question').html("<img src=\"Good-Luck.jpg\">");
             $('#choice-wrapper').hide();
             $('#quota-wrapper').hide();
         }
@@ -157,6 +158,9 @@ function check(r,a){
         padding: 5px;
         text-align: center;
         font-size: 2.8em;
+    }
+    .pic-question{
+        height: 320px
     }
     .choice{
         border: solid rgb(0, 95, 16);
