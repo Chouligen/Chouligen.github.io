@@ -14,12 +14,16 @@
             <img src="pic1.jpg">
         </div>
         <div class="question"id="question"> Plese Select numbers of question. </div>
-        <div class= "choice" id="choice1">---------</div>
-        <div class= "choice" id="choice2">---------</div>
-        <div class= "choice" id="choice3">---------</div>
-        <div class= "choice" id="choice4">---------</div>
-        <div class= "select" id="question10">10 question</div>
-        <div class= "select" id="question20">20 question</div>
+        <div id="choice-wrapper">
+            <div class= "choice" id="choice1">---------</div>
+            <div class= "choice" id="choice2">---------</div>
+            <div class= "choice" id="choice3">---------</div>
+            <div class= "choice" id="choice4">---------</div>
+        </div>
+        <div id="quota-wrapper">
+            <div class= "select" id="question10">10 question</div>
+            <div class= "select" id="question20">20 question</div>
+        </div>
     </div>
     <script src="jquery-3.3.1.min.js" charset="utf-8"></script>
 
@@ -32,7 +36,7 @@
         var number ;
         var element ;
         var sectotal =0;
-        var first =0;
+        var firstx =0;
         $(document).ready(function(){
             $.ajax({
                 url: "quiz1.json",
@@ -47,22 +51,24 @@
                 }
             });
         });
+        
         $('#question10').click(function(){
             count_question = 11;
+            firstx = 1;
             $('#point').html(point+" Points");
-            $('#question10').html("");
-            $('#question20').html("");
-            first =1;
+            $('#quota-wrapper').hide();
+            $('#choice-wrapper').show();
             nextQuestion();
         })
         $('#question20').click(function(){
             count_question = 21;
+            firstx = 1;
             $('#point').html(point+" Points");
-            $('#question20').html("");
-            $('#question10').html("");
-            first=1;
+            $('#quota-wrapper').hide();
+            $('#choice-wrapper').show();
             nextQuestion();
         })
+        
         $('#choice1').click(function(){
             check(list_question[number]["choice1"],list_question[number]["ans"])
             nextQuestion();
@@ -107,6 +113,8 @@
             $('#point').html(point+" Points");
             element.innerHTML = "Totals : "+sectotal+" seconds.";
             alert("Complete");
+            $('#choice-wrapper').hide();
+            $('#quota-wrapper').show();
         }
     }
 
@@ -139,6 +147,10 @@ function check(r,a){
 
 </body>
 <style>
+    body{
+        background-image: url("bg.jpg");
+        background-repeat: repeat;
+    }
     .boxbox{
         border: solid rgb(0, 83, 161);
         padding: 5px;
@@ -168,6 +180,12 @@ function check(r,a){
         width: 20%;
         padding: 10px;
         margin: 20px auto;
+    }
+    #choice-wrapper {
+        display: none;
+    }
+    #quota-wrapper {
+        display: block;
     }
 </style>
 </html>
