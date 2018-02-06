@@ -21,23 +21,23 @@
 },
 {
     "id": "3",
-    "question": "question3: 2+2",
-    "choice1":"1",
-    "choice2":"2",
-    "choice3":"3",
-    "choice4":"4",
-    "ans":"4",
-    "pic":"<img src=\"pic0.jpg\">"
+    "question": "question3: นายกคนปัจจุบัน",
+    "choice1":"ประวิตร วงษ์สว่าง",
+    "choice2":"ประวิตร วงษ์สุวรรณ",
+    "choice3":"ประยุทธ์ จันทร์โอโรส",
+    "choice4":"ประยุทธ์ จันทร์โอชา",
+    "ans":"ประยุทธ์ จันทร์โอชา",
+    "pic":"<img src=\"pic3.jpg\">"
 },
 {
     "id": "4",
-    "question": "question4: 4+1",
-    "choice1":"14",
-    "choice2":"15",
-    "choice3":"4",
-    "choice4":"5",
-    "ans":"5",
-    "pic":"<img src=\"pic0.jpg\">"
+    "question": "question4: คสช. ย่อมาจากอะไร",
+    "choice1":"คณะรักษาความสงาดแห่งชาติ",
+    "choice2":"คณะรักษาความเสงียบแห่งชาติ",
+    "choice3":"คณะรักษาความสง่าแห่งชาติ",
+    "choice4":"คณะรักษาความสงบแห่งชาติ",
+    "ans":"คณะรักษาความสงบแห่งชาติ",
+    "pic":"<img src=\"pic4.jpg\">"
 },
 {
     "id": "5",
