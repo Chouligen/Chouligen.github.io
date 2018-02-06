@@ -6,16 +6,18 @@
     "choice2":"2",
     "choice3":"3",
     "choice4":"4",
-    "ans":"2"
+    "ans":"2",
+    "pic":"<img src=\"pic1.png\">"
 },
 {
     "id": "2",
-    "question": "question2: 1+2",
-    "choice1":"1",
-    "choice2":"2",
-    "choice3":"3",
-    "choice4":"4",
-    "ans":"3"
+    "question": "question2: นาฬิกาของใคร",
+    "choice1":"บิ๊กตู่",
+    "choice2":"บิ๊กปู",
+    "choice3":"บิ๊กป้อม",
+    "choice4":"ของเพื่อนที่ตายไปแล้ว",
+    "ans":"ของเพื่อนที่ตายไปแล้ว",
+    "pic":"<img src=\"pic2.jpg\">"
 },
 {
     "id": "3",
@@ -24,7 +26,8 @@
     "choice2":"2",
     "choice3":"3",
     "choice4":"4",
-    "ans":"4"
+    "ans":"4",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "4",
@@ -33,7 +36,8 @@
     "choice2":"15",
     "choice3":"4",
     "choice4":"5",
-    "ans":"5"
+    "ans":"5",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "5",
@@ -42,7 +46,8 @@
     "choice2":"10",
     "choice3":"15",
     "choice4":"20",
-    "ans":"15"
+    "ans":"15",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "6",
@@ -51,7 +56,8 @@
     "choice2":"7",
     "choice3":"8",
     "choice4":"9",
-    "ans":"6"
+    "ans":"6",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "7",
@@ -60,7 +66,8 @@
     "choice2":"88",
     "choice3":"99",
     "choice4":"100",
-    "ans":"77"
+    "ans":"77",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "8",
@@ -69,7 +76,8 @@
     "choice2":"88",
     "choice3":"888",
     "choice4":"8888",
-    "ans":"8"
+    "ans":"8",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "9",
@@ -78,7 +86,8 @@
     "choice2":"90",
     "choice3":"9",
     "choice4":"0",
-    "ans":"900"
+    "ans":"900",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "10",
@@ -87,7 +96,8 @@
     "choice2":"10",
     "choice3":"11",
     "choice4":"12",
-    "ans":"10"
+    "ans":"10",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "11",
@@ -96,7 +106,8 @@
     "choice2":"10",
     "choice3":"11",
     "choice4":"12",
-    "ans":"11"
+    "ans":"11",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "12",
@@ -105,7 +116,8 @@
     "choice2":"12",
     "choice3":"123",
     "choice4":"1234",
-    "ans":"12"
+    "ans":"12",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "13",
@@ -114,7 +126,8 @@
     "choice2":"122",
     "choice3":"13",
     "choice4":"134",
-    "ans":"13"
+    "ans":"13",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "14",
@@ -123,7 +136,8 @@
     "choice2":"15",
     "choice3":"140",
     "choice4":"150",
-    "ans":"140"
+    "ans":"140",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "15",
@@ -132,7 +146,8 @@
     "choice2":"25",
     "choice3":"35",
     "choice4":"45",
-    "ans":"15"
+    "ans":"15",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "16",
@@ -141,7 +156,8 @@
     "choice2":"26",
     "choice3":"63",
     "choice4":"64",
-    "ans":"16"
+    "ans":"16",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "17",
@@ -150,7 +166,8 @@
     "choice2":"17",
     "choice3":"7",
     "choice4":"2",
-    "ans":"27"
+    "ans":"27",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "18",
@@ -159,7 +176,8 @@
     "choice2":"8999",
     "choice3":"9999",
     "choice4":"10000",
-    "ans":"8999"
+    "ans":"8999",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "19",
@@ -168,7 +186,8 @@
     "choice2":"346",
     "choice3":"347",
     "choice4":"348",
-    "ans":"346"
+    "ans":"346",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "20",
@@ -177,7 +196,8 @@
     "choice2":"12",
     "choice3":"13",
     "choice4":"14",
-    "ans":"11"
+    "ans":"11",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "21",
@@ -186,7 +206,8 @@
     "choice2":"2222",
     "choice3":"2500",
     "choice4":"2525",
-    "ans":"2525"
+    "ans":"2525",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "22",
@@ -195,7 +216,8 @@
     "choice2":"220",
     "choice3":"330",
     "choice4":"440",
-    "ans":"220"
+    "ans":"220",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "23",
@@ -204,7 +226,8 @@
     "choice2":"230",
     "choice3":"0",
     "choice4":"1",
-    "ans":"0"
+    "ans":"0",
+    "pic":"<img src=\"pic0.jpg\">"
 }
 ,{
     "id": "24",
@@ -213,7 +236,8 @@
     "choice2":"12",
     "choice3":"22",
     "choice4":"24",
-    "ans":"12"
+    "ans":"12",
+    "pic":"<img src=\"pic0.jpg\">"
 },
 {
     "id": "25",
@@ -222,6 +246,7 @@
     "choice2":"3",
     "choice3":"5",
     "choice4":"7",
-    "ans":"5"
+    "ans":"5",
+    "pic":"<img src=\"pic0.jpg\">"
 }
 ]

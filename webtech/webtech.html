@@ -11,14 +11,16 @@
         <div class="Timer" id="status">Welcome to Lab3 Game Show!</div>
         <div id="point">------------------------</div>
         <div class="pic-question">
-            <img src="pic0.jpg">
+            <img src="pic00.jpg">
         </div>
-        <div class="question"id="question"> Plese Select numbers of question. </div>
+        <div class="question"id="question">Plese Select numbers of question.</div>
         <div id="choice-wrapper">
-            <div class= "choice" id="choice1">---------</div>
-            <div class= "choice" id="choice2">---------</div>
-            <div class= "choice" id="choice3">---------</div>
-            <div class= "choice" id="choice4">---------</div>
+                <div class= "choice-inner">
+                <div class= "choice" id="choice1">---------</div>
+                <div class= "choice" id="choice2">---------</div>
+                <div class= "choice" id="choice3">---------</div>
+                <div class= "choice" id="choice4">---------</div>
+            </div>
         </div>
         <div id="quota-wrapper">
             <div class= "select" id="question10">10 question</div>
@@ -103,6 +105,7 @@
         }
         if (use_question.length<count_question){
             countDown(10,"status");
+            $('.pic-question').html(list_question[number]["pic"]);
             $('#question').html(list_question[number]["question"]);
             $('#choice1').html(list_question[number]["choice1"]);
             $('#choice2').html(list_question[number]["choice2"]);
@@ -159,12 +162,28 @@ function check(r,a){
         text-align: center;
         font-size: 2.8em;
     }
+
+    #question {
+        margin-bottom: 20px;
+    }
     .pic-question{
-        height: 320px
+        height: 420px
+    }
+    .choice-inner {
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .choice-inner > div {
+        width: 45%;
+        margin: 5px 5px;
     }
     .choice{
         border: solid rgb(0, 95, 16);
         background: rgb(101, 196, 57);
+        
     }
     .choice:hover{
         border: solid rgb(0, 49, 95);
